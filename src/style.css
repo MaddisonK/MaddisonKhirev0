@@ -1,0 +1,48 @@
+html, div
+{
+    background: #6c6271;
+}
+
+.canvas
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+div#name {
+    border: 2px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 35vh;
+    padding: 20px;
+    opacity: 100%;
+    background-color: #6c627199;
+    backdrop-filter: blur(10px);
+    vertical-align: middle;
+}
+
+div#name .center h1 {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+}
+
+p#desc {
+    color: #dbd1e0;
+    text-align: center;
+    font-size: large;
+    vertical-align: middle;
+}
+
+
+a.nav-link {
+    color: #dbd1e0;
+}
