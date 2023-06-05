@@ -1,6 +1,6 @@
 html, div
 {
-    background: #6c6271;
+    background: #454147;
 }
 
 .canvas
@@ -16,33 +16,29 @@ html, div
 }
 
 div#name {
-    border: 2px solid;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 35vh;
     padding: 20px;
-    opacity: 100%;
+    border: 1.5px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-height: 150px;
+    min-width: 35vw;
+    text-align: center;
+}
+
+p#desc, a.nav-link {
+    color: #dbd1e0;
+}
+
+div#nav {
+    border: 1px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div#nav, div#name {
     background-color: #6c627199;
-    backdrop-filter: blur(10px);
-    vertical-align: middle;
-}
-
-div#name .center h1 {
-    position: relative;
-    text-align: center;
-    vertical-align: middle;
-}
-
-p#desc {
-    color: #dbd1e0;
-    text-align: center;
-    font-size: large;
-    vertical-align: middle;
-}
-
-
-a.nav-link {
-    color: #dbd1e0;
+    backdrop-filter: blur(3px);
 }

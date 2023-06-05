@@ -1,48 +1,16 @@
 import * as THREE from "../node_modules/three/build/three.module.js"
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import {scene, mesh} from './render.js'
+import {sizes} from './parallax.js'
 
 const canvas = document.querySelector("canvas.canvas");
-console.log(canvas)
 
-
-// Scene
-const scene = new THREE.Scene()
-
-/**
- * Object
- */
-const geometry = new THREE.BoxGeometry(1, 1, 1)
-const material = new THREE.MeshBasicMaterial({ color: 0xff0000 })
-const mesh = new THREE.Mesh(geometry, material)
-scene.add(mesh)
-
-/**
- * Sizes
- */
-const sizes = {
-    width: window.innerWidth,
-    height: window.innerHeight
-}
-
-window.addEventListener('resize', () => {
-    // Update sizes
-    sizes.width = window.innerWidth
-    sizes.height = window.innerHeight
-
-    // Update camera
-    camera.aspect = sizes.width / sizes.height
-    camera.updateProjectionMatrix()
-
-    // Update renderer
-    renderer.setSize(sizes.width, sizes.height)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-})
 
 /**
  * Camera
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(30, sizes.width / sizes.height, 0.1, 100)
+const camera = new THREE.PerspectiveCamera(80, sizes.width / sizes.height, 0.1, 100)
 camera.position.z = 3
 scene.add(camera)
 
@@ -61,6 +29,21 @@ renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 /**
+ * Lights
+ */
+const directionLight = new THREE.DirectionalLight()
+const directionLightHelper = new THREE.DirectionalLightHelper(directionLight);
+directionLight.position.set(10, 10, 5)
+scene.add(directionLight)
+scene.add(directionLightHelper)
+directionLight.lookAt(mesh)
+
+
+const ambientLight = new THREE.AmbientLight('#fff', .5)
+scene.add(ambientLight)
+
+
+/**
  * Animate
  */
 const clock = new THREE.Clock()
@@ -73,6 +56,9 @@ const tick = () => {
 
     // Render
     renderer.render(scene, camera)
+
+    mesh.rotateY(.01);
+    mesh.position.set(0,  .2*Math.sin(elapsedTime * 2), 0);
 
     // Call tick again on the next frame
     window.requestAnimationFrame(tick)
