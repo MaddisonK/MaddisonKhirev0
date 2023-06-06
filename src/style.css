@@ -29,6 +29,11 @@ div#name {
     text-align: center;
 }
 
+h1 {
+    color: #dbd1e0;
+    text-shadow: 0px 0px 2px black;
+}
+
 p#desc, a.nav-link {
     color: #dbd1e0;
 }

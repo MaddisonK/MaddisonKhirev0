@@ -16,27 +16,3 @@ const visual = new Visual(canvas);
 
 // const ambientLight = new THREE.AmbientLight('#fff', .5)
 // scene.add(ambientLight)
-
-
-/**
- * Animate
- */
-// const clock = new THREE.Clock()
-
-// const tick = () => {
-//     const elapsedTime = clock.getElapsedTime()
-
-//     // Update controls
-//     controls.update()
-
-//     // Render
-//     renderer.render(scene, camera)
-
-//     mesh.rotateY(.01);
-//     mesh.position.set(0,  .2*Math.sin(elapsedTime * 2), 0);
-
-//     // Call tick again on the next frame
-//     window.requestAnimationFrame(tick)
-// }
-
-// tick()

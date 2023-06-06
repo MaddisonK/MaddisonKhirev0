@@ -33,7 +33,6 @@ export default class Visual {
     }
 
     resize() {
-        console.log("Visualizer is being resized")
         this.renderer.resize();
         this.camera.resize();
     }
