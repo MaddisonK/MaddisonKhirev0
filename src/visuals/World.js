@@ -6,7 +6,8 @@ export default class World {
     {
         this.objects = []
         // this.objects.push(new Cube())
-        this.objects.push(new ParticleSystem())
+        this.objects.push(new ParticleSystem("./textures/0.png"))
+        this.objects.push(new ParticleSystem("./textures/1.png"))
     }
 
     update() {

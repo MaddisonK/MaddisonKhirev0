@@ -2,18 +2,18 @@ import * as THREE from "three"
 import Visual from "../Visual";
 
 export default class ParticleSystem {
-    constructor() {
+    constructor(texture_path) {
         this.params = {
-            count: 1000,
-            spread: 20,
-            offsetZ: 0
+            count: 100,
+            spread: 25,
+            offsetZ: -5
         }
 
         let visual = new Visual();
         this.timer = visual.timer;
         this.scene = visual.scene;
         this.textureLoader = new THREE.TextureLoader();
-        this.particleTexture = this.textureLoader.load("./textures/0.png")
+        this.particleTexture = this.textureLoader.load(texture_path)
         this.particlesGeometry = new THREE.BufferGeometry();
 
         this.generateParticles()
@@ -36,7 +36,7 @@ export default class ParticleSystem {
 
         const particlesMaterial = new THREE.PointsMaterial()
 
-        particlesMaterial.size = 0.15
+        particlesMaterial.size = 0.5
         particlesMaterial.sizeAttenuation = true
 
         particlesMaterial.color = new THREE.Color('#0f0')
