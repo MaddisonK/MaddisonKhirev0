@@ -5,7 +5,7 @@ export default class World {
     constructor()
     {
         this.objects = []
-        this.objects.push(new Cube())
+        // this.objects.push(new Cube())
         this.objects.push(new ParticleSystem())
     }
 

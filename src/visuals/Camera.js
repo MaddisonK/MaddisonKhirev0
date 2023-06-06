@@ -10,9 +10,10 @@ export default class Camera
         this.sizer = this.visual.sizer
         this.scene = this.visual.scene
         this.canvas = this.visual.canvas
+        this.cursor = this.visual.cursor
 
         this.setInstance()
-        this.setControls()
+        // this.setControls()
     }
 
     setInstance()
@@ -36,6 +37,9 @@ export default class Camera
 
     update()
     {
-        this.controls.update()
+        // this.controls.update()
+        this.instance.position.x = this.cursor.x * 2
+        this.instance.position.y = -this.cursor.y * 2
+        this.instance.lookAt(0,0,0)
     }
 }

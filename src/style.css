@@ -44,6 +44,6 @@ div#nav {
 }
 
 div#nav, div#name {
-    background-color: #6c627199;
+    background-color: #6c627100;
     backdrop-filter: blur(3px);
 }

@@ -5,6 +5,7 @@ import Renderer from "./Renderer.js"
 import Camera from "./Camera.js"
 import Debug from "./utils/Debug.js"
 import World from "./World.js"
+import Cursor from "./utils/Cursor.js"
 
 let instance = null
 
@@ -22,6 +23,7 @@ export default class Visual {
         this.scene = new THREE.Scene()
         this.sizer = new Sizer();
         this.timer = new Timer();
+        this.cursor = new Cursor();
         this.debug = new Debug()
         this.camera = new Camera()
         this.renderer = new Renderer()
