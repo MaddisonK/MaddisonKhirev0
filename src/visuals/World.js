@@ -8,7 +8,7 @@ export default class World {
     {
         this.objects = []
         // this.objects.push(new Cube())
-        const particle_speed = 0.02;
+        const particle_speed = 0.01;
         this.objects.push(new InfiniteGravParticles("./textures/0.png", particle_speed, 0))
         this.objects.push(new InfiniteGravParticles("./textures/1.png", 0, -particle_speed))
         this.objects.push(new InfiniteGravParticles("./textures/0.png", 0, particle_speed))
