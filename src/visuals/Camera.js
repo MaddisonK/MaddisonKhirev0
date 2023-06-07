@@ -38,6 +38,10 @@ export default class Camera
     update()
     {
         // this.controls.update()
+        this.updateParallax();
+    }
+
+    updateParallax() {
         this.instance.position.x = this.cursor.x * 5
         this.instance.position.y = -this.cursor.y * 5
         this.instance.lookAt(this.cursor.x * 4, -this.cursor.y * 4, 0)
