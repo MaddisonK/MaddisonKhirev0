@@ -15,17 +15,14 @@ html, div
     outline: none;
 }
 
-div#name {
+div#center-frame {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 35vh;
-    padding: 20px;
+    padding: 50px;
     border: 1.5px solid;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    min-height: 150px;
-    min-width: 35vw;
     text-align: center;
 }
 
@@ -43,7 +40,9 @@ div#nav {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-div#nav, div#name {
+div#nav, div#center-frame {
     background-color: #28272955;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(2px);
+    border-width: 1px;
+    border-color: black;
 }
