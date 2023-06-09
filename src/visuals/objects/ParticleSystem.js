@@ -4,7 +4,7 @@ import Visual from "../Visual";
 export default class ParticleSystem {
     constructor(texture_path) {
         this.params = {
-            count: 20,
+            count: 25,
             spread: 25,
             offsetZ: -5
         }

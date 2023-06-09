@@ -13,13 +13,13 @@ export default class Camera
         this.cursor = this.visual.cursor
 
         this.setInstance()
-        this.setControls()
+        // this.setControls()
     }
 
     setInstance()
     {
         this.instance = new THREE.PerspectiveCamera(70, this.sizer.width / this.sizer.height, 0.1, 100)
-        this.instance.position.z = 3
+        this.instance.position.z = 12
         this.scene.add(this.instance)
     }
 
