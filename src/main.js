@@ -1,4 +1,7 @@
+import Navigation from "./navigation/Navigator.js";
 import Visual from "./visuals/Visual.js";
+import Navigator from "./navigation/Navigator.js";
 
-const canvas = document.querySelector("canvas.canvas");
-const visual = new Visual(canvas);
+
+const nav = new Navigator();
+const visual = new Visual(document.querySelector('canvas.canvas'));
