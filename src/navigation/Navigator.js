@@ -15,6 +15,18 @@ export default class Navigator {
                 this.main_frame.find('div#about').removeClass('d-none')
             })
 
+        this.projectsButton = $('a[href="#projects"]')
+            .on("click", () => {
+                this.hideAllMainFrameDivs();
+                this.main_frame.find('div#projects').removeClass('d-none')
+            })
+        
+        this.contactButton = $('a[href="#contact"]')
+            .on("click", () => {
+                this.hideAllMainFrameDivs();
+                this.main_frame.find('div#contact').removeClass('d-none')
+            })
+
         window.addEventListener('popstate', function (event) {
             // Log the state data to the console
             console.log(event.state);
